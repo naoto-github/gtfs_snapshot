@@ -1,0 +1,2 @@
+﻿feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version
+愛知県日進市市民生活部生活安全課,http://www.city.nisshin.lg.jp/seisaku/soshiki/007106.html,ja,20181201,20190331,20181201_009

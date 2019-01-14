@@ -1,0 +1,287 @@
+trans_id,lang,translation
+くるりんばす,ja,くるりんばす
+くるりんばす,en,Kururin Bus
+愛知県日進市市民生活部安全課,ja,愛知県日進市市民生活部安全課
+愛知県日進市市民生活部安全課,en,Nisshin City (Aichi Prefecture)
+赤池線,ja,赤池線
+赤池線,en,Akaike Line
+米野木線,ja,米野木線
+米野木線,en,Komenoki Line
+三本木線,ja,三本木線
+三本木線,en,Sanbongi Line
+梅森線,ja,梅森線
+梅森線,en,Umemori Line
+五色園線,ja,五色園線
+五色園線,en,Goshikien Line
+岩崎線,ja,岩崎線
+岩崎線,en,Iwasaki Line
+循環線,ja,循環線
+循環線,en,Loop Line (Junkan)
+市役所,ja,市役所
+市役所,en,Nisshin City Hall
+図書館,ja,図書館
+図書館,en,Nisshin City Library
+浅間下,ja,浅間下
+浅間下,en,Sengenshita
+笠寺山,ja,笠寺山
+笠寺山,en,Kasaderayama
+日進駅,ja,日進駅
+日進駅,en,Nisshin Station
+日進駅南,ja,日進駅南
+日進駅南,en,Nisshin Station South
+南ヶ丘北,ja,南ヶ丘北
+南ヶ丘北,en,Minamigaoka North
+南ヶ丘南,ja,南ヶ丘南
+南ヶ丘南,en,Minamigaoka South
+藤塚六丁目,ja,藤塚六丁目
+藤塚六丁目,en,Fujitsuka 6-chome
+高松池,ja,高松池
+高松池,en,Takamatsu Pond
+鎌ヶ寿,ja,鎌ヶ寿
+鎌ヶ寿,en,Kamagasu
+藤塚,ja,藤塚
+藤塚,en,Fujitsusuka
+上ノ山,ja,上ノ山
+上ノ山,en,Uenoyama
+浅田区民会館,ja,浅田区民会館
+浅田区民会館,en,Asada Kumin Hall
+平子,ja,平子
+平子,en,Hirako
+箕ノ手北,ja,箕ノ手北
+箕ノ手北,en,Minote North
+赤池駅南,ja,赤池駅南
+赤池駅南,en,Akaike Station South
+赤池駅,ja,赤池駅
+赤池駅,en,Akaike Station
+赤池小学校,ja,赤池小学校
+赤池小学校,en,Akaike Elementary School
+赤池南一丁目,ja,赤池南一丁目
+赤池南一丁目,en,Akaikeminami 1-chome
+箕ノ手西,ja,箕ノ手西
+箕ノ手西,en,Minote West
+箕ノ手中央,ja,箕ノ手中央
+箕ノ手中央,en,Minote Chuo
+箕ノ手東,ja,箕ノ手東
+箕ノ手東,en,Minote East
+平子南,ja,平子南
+平子南,en,Hirako South
+藤塚南,ja,藤塚南
+藤塚南,en,Fujitsuka South
+おりど病院,ja,おりど病院
+おりど病院,en,Orido Hospital
+市役所東,ja,市役所東
+市役所東,en,Nisshin City Hall East
+日生東山,ja,日生東山
+日生東山,en,Nisseihigashiyama
+寺脇,ja,寺脇
+寺脇,en,Terawaki
+東山グランド,ja,東山グランド
+東山グランド,en,Higashiyama Ground
+日東東山,ja,日東東山
+日東東山,en,Nittohigashiyama
+日東東山北,ja,日東東山北
+日東東山北,en,Nittohigashiyama Nouth
+橦木北,ja,橦木北
+橦木北,en,Syumoku Nouth
+栄,ja,栄
+栄,en,Sakae
+日進団地,ja,日進団地
+日進団地,en,Nisshin Danchi
+米野木台二丁目,ja,米野木台二丁目
+米野木台二丁目,en,Komenokdai 2-chome
+福成,ja,福成
+福成,en,Fukunari
+宮西,ja,宮西
+宮西,en,Miyanishi
+藤島,ja,藤島
+藤島,en,Fujishima
+藤島小万場,ja,藤島小万場
+藤島小万場,en,Fujishimakomanba
+東中学校,ja,東中学校
+東中学校,en,Nisshin-Higashi Junior High School
+東部福祉会館北,ja,東部福祉会館北
+東部福祉会館北,en,Eastern Welfare Hall Nouth
+本米野木,ja,本米野木
+本米野木,en,Motokomenoki
+米野木駅,ja,米野木駅
+米野木駅,en,Komenoki Station
+平子台,ja,平子台
+平子台,en,Hirakodai
+米野木西,ja,米野木西
+米野木西,en,Komenoki West
+藤枝,ja,藤枝
+藤枝,en,Fujieda
+中央福祉センター,ja,中央福祉センター
+中央福祉センター,en,Central Welfare Center
+米野木,ja,米野木
+米野木,en,Komenoki
+米野木東仲,ja,米野木東仲
+米野木東仲,en,Komenokihigashinaka
+丸山,ja,丸山
+丸山,en,Maruyama
+柿ノ木,ja,柿ノ木
+柿ノ木,en,Kakinoki
+三本木,ja,三本木
+三本木,en,Sanbongi
+日進ニュータウン,ja,日進ニュータウン
+日進ニュータウン,en,Nisshin Newtown
+三本木区民会館,ja,三本木区民会館
+三本木区民会館,en,Sanbongi Kumin Hall
+上川田,ja,上川田
+上川田,en,Kamikawada
+三ヶ峯,ja,三ヶ峯
+三ヶ峯,en,Sagamine
+名商大,ja,名商大
+名商大,en,Nagoya University of Commerce & Business
+南山エピック北,ja,南山エピック北
+南山エピック北,en,Minamiyama-Epic North
+南山エピック,ja,南山エピック
+南山エピック,en,Minamiyama-Epic
+南山エピック南,ja,南山エピック南
+南山エピック南,en,Minamiyama-Epic South
+愛知牧場西,ja,愛知牧場西
+愛知牧場西,en,Aichi Farm West
+下五反田,ja,下五反田
+下五反田,en,Shimogotanda
+本郷,ja,本郷
+本郷,en,Hongo
+白山,ja,白山
+白山,en,Hakusan
+保健センター北,ja,保健センター北
+保健センター北,en,Healthcare Center North
+畔道,ja,畔道
+畔道,en,Azemichi
+北高上,ja,北高上
+北高上,en,Kitakojo
+南高上,ja,南高上
+南高上,en,Minamikojo
+香久山東,ja,香久山東
+香久山東,en,Kaguyama East
+岩崎台・香久山福祉会館,ja,岩崎台・香久山福祉会館
+岩崎台・香久山福祉会館,en,Iwasakidai and Kaguyama Welfare Hall
+香久山中,ja,香久山中
+香久山中,en,Kaguyama Center
+香久山,ja,香久山
+香久山,en,Kaguyama
+新田,ja,新田
+新田,en,Shinden
+日生梅森園前,ja,日生梅森園前
+日生梅森園前,en,Nisseiumemorien-mae
+日生梅森園,ja,日生梅森園
+日生梅森園,en,Nisseiumemorien
+東名古屋病院,ja,東名古屋病院
+東名古屋病院,en,Higashi Nagoya Hospital
+梅森,ja,梅森
+梅森,en,Umemori
+梅森台,ja,梅森台
+梅森台,en,Umemordai
+梅森台中,ja,梅森台中
+梅森台中,en,Umemorida Center
+梅森台西,ja,梅森台西
+梅森台西,en,Umemorida West
+梅森西,ja,梅森西
+梅森西,en,Umemori West
+平針北,ja,平針北
+平針北,en,Hirabari North
+西部福祉会館,ja,西部福祉会館
+西部福祉会館,en,Western Welfare Hall
+赤池駅北,ja,赤池駅北
+赤池駅北,en,Akaike Station North
+生涯学習プラザ,ja,生涯学習プラザ
+生涯学習プラザ,en,Lifelong Learning Plaza
+浅田北,ja,浅田北
+浅田北,en,Asada North
+野方公民館,ja,野方公民館
+野方公民館,en,Nokata Public Hall
+岩藤東,ja,岩藤東
+岩藤東,en,Iwafuji East
+七ツ塚,ja,七ツ塚
+七ツ塚,en,Nanatsuduka
+夏焼,ja,夏焼
+夏焼,en,Natsuyake
+総合運動公園西,ja,総合運動公園西
+総合運動公園西,en,Municipali Sports Park West
+五色園,ja,五色園
+五色園,en,Goshikien
+かえで台,ja,かえで台
+かえで台,en,Kaededai
+かえで台西,ja,かえで台西
+かえで台西,en,Kaededai West
+北新町,ja,北新町
+北新町,en,Kitashincho
+愛知学院大東,ja,愛知学院大東
+愛知学院大東,en,Aichi Gakuin University East
+口論義運動公園,ja,口論義運動公園
+口論義運動公園,en,Korogi Sports Park
+長久手古戦場駅,ja,長久手古戦場駅
+長久手古戦場駅,en,Nagakute Kosenjo Station
+相野山福祉会館,ja,相野山福祉会館
+相野山福祉会館,en,Ainoyama Welfare Hall
+つばき台,ja,つばき台
+つばき台,en,Tsubakidai
+かえで台北,ja,かえで台北
+かえで台北,en,kaededai North
+五色園南,ja,五色園南
+五色園南,en,Goshikien South
+五色園東,ja,五色園東
+五色園東,en,Goshikien East
+保健センター東,ja,保健センター東
+保健センター東,en,Healthcare Center East
+御岳口,ja,御岳口
+御岳口,en,Ontakeguchi
+六坊,ja,六坊
+六坊,en,Rokubo
+弁天池南,ja,弁天池南
+弁天池南,en,Benten Pond
+岩根,ja,岩根
+岩根,en,Iwane
+芦廻間,ja,芦廻間
+芦廻間,en,Yoshihazama
+岩崎台東,ja,岩崎台東
+岩崎台東,en,Iwasakidai East
+岩崎台,ja,岩崎台
+岩崎台,en,Iwasakidai
+けやき公園,ja,けやき公園
+けやき公園,en,Keyaki Park
+岩崎台西,ja,岩崎台西
+岩崎台西,en,Iwasakidai West
+岩崎台南,ja,岩崎台南
+岩崎台南,en,Iwasakidai South
+石神,ja,石神
+石神,en,Ishigami
+北部保育園,ja,北部保育園
+北部保育園,en,Municipal Hokubu Nursery School
+障害者福祉センター,ja,障害者福祉センター
+障害者福祉センター,en,Welfare Center for the Physically Disabled 
+椙山女学園大,ja,椙山女学園大
+椙山女学園大,en,Sugiyama Jogakuen University
+竹の山中,ja,竹の山中
+竹の山中,en,Takenoyama Center
+名外大・名学芸大前,ja,名外大・名学芸大前
+名外大・名学芸大前,en,NUFS & NUAS
+名外大・名学芸大東,ja,名外大・名学芸大東
+名外大・名学芸大東,en,NUFS & NUAS East
+グリーンハイツ,ja,グリーンハイツ
+グリーンハイツ,en,Green Heights
+弁天池,ja,弁天池
+弁天池,en,Benten Pond
+北部福祉会館北,ja,北部福祉会館北
+北部福祉会館北,en,Northern Welfare Hall North
+岩崎橋西,ja,岩崎橋西
+岩崎橋西,en,Iwasaki Bridge West
+御岳,ja,御岳
+御岳,en,Mitake
+小林,ja,小林
+小林,en,Kobayashi
+岩崎橋東,ja,岩崎橋東
+岩崎橋東,en,Iwasaki Bridge East
+岩藤西,ja,岩藤西
+岩藤西,en,Iwafuji West
+岩藤,ja,岩藤
+岩藤,en,Iwafuji
+藤島公会堂,ja,藤島公会堂
+藤島公会堂,en,Fujishima Kokaido
+折戸,ja,折戸
+折戸,en,Orido
+市民会館,ja,市民会館
+市民会館,en,Nisshin City Culture Hall

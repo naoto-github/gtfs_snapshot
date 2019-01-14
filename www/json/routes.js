@@ -1,0 +1,9 @@
+var routes_data = [
+ 	{  "route_id" : "101000",  "agency_id" : "8000020232301",  "route_short_name" : "赤池線",  "route_long_name" : "くるりんばす赤池線",  "route_desc" : "",  "route_type" : "3",  "route_url" : "",  "route_color" : "004460",  "route_text_color" : "FFFFFF",  },
+	{  "route_id" : "111000",  "agency_id" : "8000020232301",  "route_short_name" : "米野木線",  "route_long_name" : "くるりんばす米野木線",  "route_desc" : "",  "route_type" : "3",  "route_url" : "",  "route_color" : "803E1B",  "route_text_color" : "FFFFFF",  },
+	{  "route_id" : "121000",  "agency_id" : "8000020232301",  "route_short_name" : "三本木線",  "route_long_name" : "くるりんばす三本木線",  "route_desc" : "",  "route_type" : "3",  "route_url" : "",  "route_color" : "B31420",  "route_text_color" : "FFFFFF",  },
+	{  "route_id" : "131000",  "agency_id" : "8000020232301",  "route_short_name" : "梅森線",  "route_long_name" : "くるりんばす梅森線",  "route_desc" : "",  "route_type" : "3",  "route_url" : "",  "route_color" : "F07D00",  "route_text_color" : "FFFFFF",  },
+	{  "route_id" : "141000",  "agency_id" : "8000020232301",  "route_short_name" : "五色園線",  "route_long_name" : "くるりんばす五色園線",  "route_desc" : "",  "route_type" : "3",  "route_url" : "",  "route_color" : "4C7525",  "route_text_color" : "FFFFFF",  },
+	{  "route_id" : "151000",  "agency_id" : "8000020232301",  "route_short_name" : "岩崎線",  "route_long_name" : "くるりんばす岩崎線",  "route_desc" : "",  "route_type" : "3",  "route_url" : "",  "route_color" : "7C5F8A",  "route_text_color" : "FFFFFF",  },
+	{  "route_id" : "161000",  "agency_id" : "8000020232301",  "route_short_name" : "循環線",  "route_long_name" : "くるりんばす循環線",  "route_desc" : "",  "route_type" : "3",  "route_url" : "",  "route_color" : "14B8D8",  "route_text_color" : "FFFFFF",  },
+];

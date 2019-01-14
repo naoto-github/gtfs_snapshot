@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone
+8000020232301,くるりんばす,http://www.city.nisshin.lg.jp/shisetsu/bus/index.html,Asia/Tokyo,ja,0561-73-3249
