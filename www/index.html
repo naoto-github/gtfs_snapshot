@@ -7,19 +7,107 @@
   <script src="components/loader.js"></script>
   <script src="lib/onsenui/js/onsenui.min.js"></script>
 
+  <!-- CDN for Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/style.css">
 
   <script>
+    
+    // トップページの初期化
+    function initTop(){
+      console.log("init top.html");
+    }
+
+    // 地図ページの初期化
+    function initMap(){
+      console.log("init map.html");
+
+      // 緯度経度と倍率
+      var center = L.latLng(35.130621, 137.037568);
+      var zoom = 12;
+
+      var map = L.map("map");
+      map.setView(center, zoom);
+
+      L.tileLayer(
+        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        { attribution: "&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"}
+      ).addTo(map); 
+    }
+
     ons.ready(function() {
-      console.log("Onsen UI is ready!");
+
+      // ナビゲータの取得
+      var navigator = document.getElementById('navigator');
+
+      document.addEventListener('init', function(event){
+        var page = event.target;
+
+        console.log("ID: " + page.id);
+
+        if(page.id == "top-page") {
+          initTop();
+        } 
+        else if(page.id == "map-page") {
+          initMap();
+        }
+      });
+
+      $("#start").click(function(){
+        navigator.pushPage("map.html");
+      });
+
     });
   </script>
 </head>
 <body>
-  This is a template for Onsen UI app.
-  これはテストです．
+
+  <ons-navigator id="navigator" page="top.html"></ons-navigator>
+
+  <ons-template id="top.html">
+    <ons-page id="top-page">
+
+      <ons-toolbar>
+        <div class="center">GTFS Snapshot</div>
+      </ons-toolbar>
+
+      <div id="main">
+
+        <div id="title">
+          <h1>日進市のGTFSのデータで</h1> 
+          <h1>バスロケを記録</h1>
+        </div>
+
+        <ons-button id="start" modifier="large--cta">
+          <p style="font-size:30px; margin-top:5px;">スタート</p>
+        </ons-button>
+
+      </div>
+
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="map.html">
+    <ons-page id="map-page">
+
+      <ons-toolbar>
+        <div class="left"><ons-back-button>TOP</ons-back-button></div>
+        <div class="center">GTFS Snapshot</div>
+      </ons-toolbar>
+
+      <div id="map"></div>
+    </ons-page>
+  </ons-template>
+
 </body>
 </html>
