@@ -22,12 +22,16 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- CLASS -->
-  <script src="RouteClass.js"></script>
+  <script src="BusRouteClass.js"></script>
+  <script src="BusStopClass.js"></script>
+  <script src="BusTimeClass.js"></script>
 
   <!-- GTFS -->
   <script src="json/stops.js"></script>
   <script src="json/routes.js"></script>
   <script src="json/shapes.js"></script>
+  <script src="json/trips.js"></script>
+  <script src="json/trip_times.js"></script>
 
   <script>
 
@@ -39,6 +43,12 @@
 
     // 経路
     var routes = new Array();
+
+    // 時刻表
+    var timetables = new Array();
+
+    // フォーカスする時間差
+    var focus_time = 5;
 
     // トップページの初期化
     function initTop(){
@@ -64,23 +74,175 @@
       ).addTo(map); 
     }
 
-    // バス停の表示
-    function showStops(){
+    // バス停データの取得
+    function loadStops(){
       for(var i=0; i<stops_data.length; i++){
-        // console.log(stops_data[i].stop_name + " " + stops_data[i].stop_lat + " " + stops_data[i].stop_lon);
-        var marker = L.marker([stops_data[i].stop_lat, stops_data[i].stop_lon],
+        
+        var marker = L.circleMarker([stops_data[i].stop_lat, stops_data[i].stop_lon],
         {
           title: stops_data[i].stop_name,
-          opacity: 0.8
+          opacity: 0.8,
+          radius: 15
         });
         marker.bindPopup("<p>" + stops_data[i].stop_name + "</p>");
         marker.addTo(map);
-        stops.push(marker);
+
+        var stop = new BusStopClass(stops_data[i].stop_id, stops_data[i].stop_name, marker);
+        
+        stops[stop.id] = stop;
+
+        // console.log(stop.log());
       }
     }
 
-    // 経路の表示
-    function showShapes(){
+    // バス停の選択
+    function selectStop(){
+      var value = $("#select").val();
+      
+      var target_stop = stops[value];
+
+      target_stop.marker.openPopup();
+      map.panTo(target_stop.marker.getLatLng());
+    }
+
+    // 平日・土日祝の選択
+    function selectDay(){
+      setTimePopup();
+    }
+
+    // 現在時刻の設定
+    function setCurrentTime(){
+      var date = new Date();
+      var h = date.getHours();
+      var m = date.getMinutes();
+      var target_time = h * 60 + m;
+      $("#current_time").text(h + "時" + m + "分");
+      $("#search_time").val(h * 60 + m);
+      setFocusStop(target_time);
+    }
+
+    // 注目するバス停
+    function setFocusStop(target_time){
+      for(key_stop in stops){
+        stop = stops[key_stop];
+
+        // デフォルトに戻す
+        stop.marker.setRadius(10);
+        stop.marker.setStyle({
+          color: "blue"
+        })
+
+        for(key_table in stop.table){
+          timetable = stop.table[key_table];
+
+          // 平日か土日祝
+          var service = $("#select-day").val()
+          if(timetable.service_id == service){
+
+            var arrival_time = (timetable.time.getHours() * 60) + timetable.time.getMinutes();
+            var diff = arrival_time - target_time;
+
+            if(diff >= 0 &&  diff <= focus_time){
+              stop.marker.setStyle({
+                color: "yellow"
+              })
+            }
+            else if(diff >= (-1 * focus_time) && diff <= 0){
+              stop.marker.setStyle({
+                color: "red"
+              })
+            }
+          }
+        }
+      }
+    }
+
+    // コントロールの設定
+    function setControl(){
+
+      // セレクトボックス
+      for(key in stops){
+        var stop = stops[key];
+        $("#select").append("<option value=" + stop.id + ">" + stop.name + "</option>");
+      }
+
+      $("#search_time").on("input", function(){
+        var target_time = Number($(this).val());
+        var h = Math.floor(target_time / 60);
+        var m = target_time % 60;
+        $("#current_time").text(h + "時" + m + "分");
+
+        setFocusStop(target_time);
+      })
+    }
+
+    // 時刻表データの取得
+    function loadTimeTables(){
+      
+      for(var i=0; i<trip_times_data.length; i++){
+        var id = trip_times_data[i].trip_id + "-" + trip_times_data[i].stop_sequence
+        var bus_time = new BusTimeClass(id, trip_times_data[i].trip_id, trip_times_data[i].arrival_time, trip_times_data[i].stop_id);
+        timetables[bus_time.id] = bus_time;
+      }
+
+      for(key in timetables){
+        bus_time = timetables[key];
+      
+        for(var i=0; i<trips_data.length; i++){
+       
+          if(bus_time.trip_id == trips_data[i].trip_id){  
+            bus_time.name = trips_data[i].trip_short_name;
+            bus_time.shape_id = trips_data[i].shape_id;
+            bus_time.service_id = trips_data[i].service_id;
+          }
+        }
+
+        // console.log(bus_time.log());
+      }
+
+    }
+
+    // 時刻表データのポップアップ
+    function setTimePopup(){
+      for(key_stop in stops){
+        var stop = stops[key_stop];
+
+        var html = "<div style='height:200px; overflow:scroll'>";
+        html += "<h3>" + stop.name + "</h3>"
+        html += "<ul>"
+        for(var i=0; i<stop.table.length; i++){
+          var value = $("#select-day").val()
+          if(stop.table[i].service_id == value){
+            html += "<li>" + stop.table[i].service_id + " " + stop.table[i].name + " " + stop.table[i].time.getHours() + "時" + stop.table[i].time.getMinutes() + "分" + "</li>";
+          }
+        }
+        html += "</ul>"
+        html += "</div>"
+
+        stop.marker.bindPopup(html);
+      }
+    }
+
+    // 時刻表データの設定
+    function setTimeTables(){
+      for(key_stop in stops){
+        var stop = stops[key_stop];
+
+        for(key_timetable in timetables){
+          var timetable = timetables[key_timetable];
+
+          if(stop.id == timetable.stop_id){
+            stop.table.push(timetable)
+          }
+        }
+
+        setTimePopup();
+        // console.log(stop.log())
+      }
+    }
+
+    // 経路データの取得
+    function loadShapes(){
 
       // バス路線パターンの取得
       var route_patterns = new Array();
@@ -102,35 +264,46 @@
           }
         });
 
-        var route = new RouteClass(route_patterns[i]);
-        route.route = shape;
-        routes.push(route);
-
-        // console.log(route.id + " " + route.length);
+        var route = new BusRouteClass(route_patterns[i]);
+        route.shape = shape;
+        routes[route.id] = route;
       }
 
       // バス路線名の設定
-      for(var i=0; i<routes.length; i++){
-        id = routes[i].id;
-        // console.log("route: " + routes[i].id + " " + routes[i].name);
+      for(key in routes){
+        route = routes[key];
+
+        id = route.id;
+        
         for(var j=0; j<routes_data.length; j++){
-          // console.log("route: " + routes[i].id + " " + routes_data[i].route_name);
-          if(id.indexOf(routes_data[j].route_id) === 0){
-            routes[i].name = routes_data[j].route_short_name;
+          
+          var re = new RegExp(routes_data[j].route_id + ".*")
+          if(id.match(re)){
+            route.name = routes_data[j].route_short_name;
+            route.color = "#" + routes_data[j].route_color;
           }
         }
-
-        // console.log(routes[i].id + " " + " " + routes[i].name + " " + routes[i].route.length);
+        
       }
 
-      // 経路の描画
-      for(var i=0; i<routes.length; i++){
+       // 経路の描画
+      for(key in routes){
+        route = routes[key];
+
         var latlngs = new Array();
-        for(var j=0; j<routes[i].route.length; j++){
-          latlngs.push([routes[i].route[j].shape_pt_lat, routes[i].route[j].shape_pt_lon]);
+
+        for(var j=0; j<route.shape.length; j++){
+          latlngs.push([route.shape[j].shape_pt_lat, route.shape[j].shape_pt_lon]);
         }
-        var line = new L.polyline(latlngs);
+
+        var line = new L.polyline(latlngs, {
+          color: route.color
+        });
+
         line.addTo(map);
+        route.line = line;
+
+        // console.log(route.log());
       }
     }
 
@@ -149,8 +322,12 @@
         } 
         else if(page.id == "map-page") {
           initMap();
-          showStops();
-          showShapes();
+          loadStops();
+          loadShapes();
+          loadTimeTables();
+          setTimeTables();
+          setCurrentTime();
+          setControl();
         }
       });
 
@@ -197,6 +374,34 @@
       </ons-toolbar>
 
       <div id="map"></div>
+
+      <div id="control">
+        <div>
+
+          <ons-select class="select">
+            <select class="select-input" id="select-day" onchange="selectDay(event)">
+              <option value="平日">平日</option>
+              <option value="土日祝">土日祝</option>
+            </select>
+          </ons-select>
+
+          <ons-select class="select">
+            <select class="select-input" id="select" onchange="selectStop(event)">
+            </select>
+          </ons-select>   
+        </div>
+
+        <div style="margin-top:15px">
+          <span>
+            時刻: <span id="current_time">0時0分</span>
+          </span>
+        </div>
+
+        <div>
+          <ons-range id="search_time" style="width: 80%" min="0" max="1440"></ons-range>
+        </div>
+      </div>
+
     </ons-page>
   </ons-template>
 
