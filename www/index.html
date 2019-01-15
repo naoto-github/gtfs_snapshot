@@ -48,7 +48,13 @@
     var timetables = new Array();
 
     // フォーカスする時間差
-    var focus_time = 5;
+    var focus_time = 3;
+
+    // マーカーの半径
+    var marker_radius = 5;
+
+    // 繰り返し
+    var repeat_flg = false;
 
     // トップページの初期化
     function initTop(){
@@ -82,7 +88,8 @@
         {
           title: stops_data[i].stop_name,
           opacity: 0.8,
-          radius: 15
+          color: "gray",
+          radius: marker_radius
         });
         marker.bindPopup("<p>" + stops_data[i].stop_name + "</p>");
         marker.addTo(map);
@@ -96,13 +103,43 @@
     }
 
     // バス停の選択
-    function selectStop(){
+    function selectStop(event){
       var value = $("#select").val();
       
       var target_stop = stops[value];
 
       target_stop.marker.openPopup();
       map.panTo(target_stop.marker.getLatLng());
+    }
+
+    function onClick(event){
+
+      repeat_flg = !repeat_flg;
+
+      if(repeat_flg){
+        $("#play-icon").attr("icon", "stop");
+      }
+      else{
+        $("#play-icon").attr("icon", "play");
+      }
+
+      setInterval(function(){
+        if(repeat_flg){
+          update();
+        }
+      }, 100);
+    }
+
+    function update(){
+      var current_time = Number($("#search_time").val());
+      if(current_time < 1440){
+        target_time = current_time + 1;
+        $("#search_time").val(target_time);
+        var h = Math.floor(target_time / 60);
+        var m = target_time % 60;
+        $("#current_time").text(h + "時" + m + "分");
+        setFocusStop(target_time);
+      }
     }
 
     // 平日・土日祝の選択
@@ -127,9 +164,8 @@
         stop = stops[key_stop];
 
         // デフォルトに戻す
-        stop.marker.setRadius(10);
         stop.marker.setStyle({
-          color: "blue"
+          color: "gray"
         })
 
         for(key_table in stop.table){
@@ -142,12 +178,17 @@
             var arrival_time = (timetable.time.getHours() * 60) + timetable.time.getMinutes();
             var diff = arrival_time - target_time;
 
-            if(diff >= 0 &&  diff <= focus_time){
+            if(diff == 0){
+              stop.marker.setStyle({
+                color: "green"
+              })
+            }
+            else if(diff > 0 &&  diff <= focus_time){
               stop.marker.setStyle({
                 color: "yellow"
               })
             }
-            else if(diff >= (-1 * focus_time) && diff <= 0){
+            else if(diff >= (-1 * focus_time) && diff < 0){
               stop.marker.setStyle({
                 color: "red"
               })
@@ -322,8 +363,8 @@
         } 
         else if(page.id == "map-page") {
           initMap();
-          loadStops();
           loadShapes();
+          loadStops();
           loadTimeTables();
           setTimeTables();
           setCurrentTime();
@@ -398,7 +439,10 @@
         </div>
 
         <div>
-          <ons-range id="search_time" style="width: 80%" min="0" max="1440"></ons-range>
+          <ons-range id="search_time" style="width: 60%" min="360" max="1440"></ons-range>
+          <ons-button id="play" onClick="onClick(event)">
+            <ons-icon id="play-icon" icon="play"></ons-icon>
+          </ons-button>
         </div>
       </div>
 
