@@ -21,7 +21,7 @@ packageフォルダにある**gtfs-snapshot.apk**を，
 
 1. 実行するとトップ画面が表示されます．**スタート**をタップしてください．
 
-[![Image from Gyazo](https://i.gyazo.com/2e05e5e7c98b8f548e373e236aeb4070.jpg)](https://gyazo.com/2e05e5e7c98b8f548e373e236aeb4070)
+<a href="https://gyazo.com/2e05e5e7c98b8f548e373e236aeb4070"><img width="300px" src="https://i.gyazo.com/2e05e5e7c98b8f548e373e236aeb4070.jpg" alt="Image from Gyazo" width="1080"/></a>
 
 2. メイン画面です．日進市のオープンストリートマップが表示されます．画面下部に操作用のインターフェイスがあります．
 バス停を選択すると，選択したバス停が地図でフォーカスされ，時刻表がポップアップで表示されます．
@@ -29,8 +29,8 @@ packageフォルダにある**gtfs-snapshot.apk**を，
 このとき，指定時刻から３分以内に到着するバス停は黄色，指定時刻にバスが到着するバス停は緑色，過去３分にバスが通り過ぎたバス停は赤色で表示されます．
 スライダーの右にある**プレイ**をタップすると，スライダーは自動で動きます．
 
-[![Image from Gyazo](https://i.gyazo.com/97e63382e7ce8bcc5b2eeabdbc495e7d.jpg)](https://gyazo.com/97e63382e7ce8bcc5b2eeabdbc495e7d)
+<a href="https://gyazo.com/97e63382e7ce8bcc5b2eeabdbc495e7d"><img width="300px" src="https://i.gyazo.com/97e63382e7ce8bcc5b2eeabdbc495e7d.jpg" alt="Image from Gyazo" width="1080"/></a>
 
-[![Image from Gyazo](https://i.gyazo.com/fa400fd4924990320ae27c1ccca34bf2.jpg)](https://gyazo.com/fa400fd4924990320ae27c1ccca34bf2)
+<a href="https://gyazo.com/97e63382e7ce8bcc5b2eeabdbc495e7d"><img width="300px" src="https://i.gyazo.com/97e63382e7ce8bcc5b2eeabdbc495e7d.jpg" alt="Image from Gyazo" width="1080"/></a>
 
-[![Image from Gyazo](https://i.gyazo.com/8d9dfde6f375702854c5ee7969d23014.jpg)](https://gyazo.com/8d9dfde6f375702854c5ee7969d23014)
+<a href="https://gyazo.com/8d9dfde6f375702854c5ee7969d23014"><img width="300px" src="https://i.gyazo.com/8d9dfde6f375702854c5ee7969d23014.jpg" alt="Image from Gyazo" width="1080"/></a>
