@@ -32,6 +32,6 @@ packageフォルダにある**gtfs-snapshot.apk**を，
 
 <a href="https://gyazo.com/97e63382e7ce8bcc5b2eeabdbc495e7d"><img width="300px" src="https://i.gyazo.com/97e63382e7ce8bcc5b2eeabdbc495e7d.jpg" alt="Image from Gyazo" width="1080"/></a>
 
-<a href="https://gyazo.com/97e63382e7ce8bcc5b2eeabdbc495e7d"><img width="300px" src="https://i.gyazo.com/97e63382e7ce8bcc5b2eeabdbc495e7d.jpg" alt="Image from Gyazo" width="1080"/></a>
+<a href="https://gyazo.com/fa400fd4924990320ae27c1ccca34bf2"><img width="300px" src="https://i.gyazo.com/fa400fd4924990320ae27c1ccca34bf2.jpg" alt="Image from Gyazo" width="1080"/></a>
 
 <a href="https://gyazo.com/8d9dfde6f375702854c5ee7969d23014"><img width="300px" src="https://i.gyazo.com/8d9dfde6f375702854c5ee7969d23014.jpg" alt="Image from Gyazo" width="1080"/></a>
